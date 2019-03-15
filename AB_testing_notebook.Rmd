@@ -1,0 +1,28 @@
+---
+title: "A/B testing notebook"
+output: html_document
+author: "Amir Brohi"
+---
+
+## Background
+
+A/B testing is used in many companies, as it enables us to determine whether changes can lead to an improvement in conversion rate, hits or whatever the evualation metric is. A/B testing puts the customer first, it is a customer focused approach. 
+
+A major issue with traditional, statistical-inference approaches to A/B Testing is that it only compares 2 variables - an experiment/control to an outcome. The problem is that customer behavior is vastly more complex than this. Also, traditional A/B test is a binary outcome (tests whether one group differs the other), it does not measure the effect. 
+
+This is where Machine Learning excels, generating insights from complex systems.
+
+
+```{r message=FALSE, warning=FALSE}
+
+library(tidyverse)
+library(tidyquant)
+library(recipes)
+library(rsample)
+library(yardstick)
+library(broom)
+library(rpart)
+library(rpart.plot)
+library(xgboost)
+```
+
