@@ -209,6 +209,32 @@ library(broom)
 library(rpart)
 library(rpart.plot)
 library(xgboost)</code></pre>
+<pre class="r"><code># Import data
+
+control_tbl &lt;- read_csv(&quot;data/control_data.csv&quot;)
+experiment_tbl &lt;- read_csv(&quot;data/experiment_data.csv&quot;)
+str(control_tbl)</code></pre>
+<pre><code>## Classes 'tbl_df', 'tbl' and 'data.frame':    37 obs. of  5 variables:
+##  $ Date       : chr  &quot;Sat, Oct 11&quot; &quot;Sun, Oct 12&quot; &quot;Mon, Oct 13&quot; &quot;Tue, Oct 14&quot; ...
+##  $ Pageviews  : int  7723 9102 10511 9871 10014 9670 9008 7434 8459 10667 ...
+##  $ Clicks     : int  687 779 909 836 837 823 748 632 691 861 ...
+##  $ Enrollments: int  134 147 167 156 163 138 146 110 131 165 ...
+##  $ Payments   : int  70 70 95 105 64 82 76 70 60 97 ...
+##  - attr(*, &quot;spec&quot;)=List of 2
+##   ..$ cols   :List of 5
+##   .. ..$ Date       : list()
+##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_character&quot; &quot;collector&quot;
+##   .. ..$ Pageviews  : list()
+##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_integer&quot; &quot;collector&quot;
+##   .. ..$ Clicks     : list()
+##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_integer&quot; &quot;collector&quot;
+##   .. ..$ Enrollments: list()
+##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_integer&quot; &quot;collector&quot;
+##   .. ..$ Payments   : list()
+##   .. .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_integer&quot; &quot;collector&quot;
+##   ..$ default: list()
+##   .. ..- attr(*, &quot;class&quot;)= chr  &quot;collector_guess&quot; &quot;collector&quot;
+##   ..- attr(*, &quot;class&quot;)= chr &quot;col_spec&quot;</code></pre>
 </div>
 
 

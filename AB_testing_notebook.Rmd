@@ -26,3 +26,9 @@ library(rpart.plot)
 library(xgboost)
 ```
 
+```{r message=FALSE, warning=FALSE}
+# Import data
+
+control_tbl <- read_csv("data/control_data.csv")
+experiment_tbl <- read_csv("data/experiment_data.csv")
+```
